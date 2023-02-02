@@ -1,0 +1,20 @@
+.galleryContainer {
+    max-width: 800px;
+    height: 400px;
+    position: relative;
+    border-radius: 10px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.photo {
+    position: absolute;
+    left: 25%;
+    height: 100%;
+    transition: ease 1s;
+}
+.photo > img {
+    border-radius: 50px;
+}
+.photo:active{
+    transform: translate(100%);
+}

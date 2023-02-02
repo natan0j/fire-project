@@ -1,0 +1,87 @@
+.spark {
+    background-color: rgb(255, 162, 0);
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    animation-name: sparkFly;
+    opacity: 0;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+}
+
+.spark2 {
+    background-color: rgb(255, 162, 0);
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    animation-name: sparkFly2;
+    opacity: 0;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+}
+
+.spark3 {
+    background-color: rgb(255, 162, 0);
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    animation-name: sparkFly3;
+    opacity: 0;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+}
+
+@keyframes sparkFly{
+    0%{
+        transform: translate(0) rotate(180deg);
+      }
+       50% {
+         opacity: 1;
+         transform: translate(-50px, -100px);
+      }
+        75% {
+         transform: translate(-60px, -75px);   
+         opacity: 0.25;
+        }
+      100% {
+        transform: translate(-75px, -50px) rotate(180deg);
+        opacity: 0;
+      }
+}
+
+@keyframes sparkFly2{
+      0%{
+        transform: translate(0) rotate(180deg);
+      }
+       50% {
+         opacity: 1;
+         transform: translate(20px, -75px);
+      }
+        75% {
+         transform: translate(40px, -100px);   
+         opacity: 0.25;
+        }
+      100% {
+        transform: translate(60px, -80px) rotate(-90deg);
+        opacity: 0;
+      }
+}
+
+@keyframes sparkFly3{
+    0%{
+        transform: translate(0) rotate(180deg);
+      }
+       50% {
+         opacity: 1;
+      }
+      100% {
+        transform: translate(50px, -100px) rotate(180deg);
+        opacity: 0;
+      }
+}
