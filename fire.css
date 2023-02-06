@@ -3,30 +3,32 @@ body {
     width: 100%;
     margin: 0;
     font-family: impact, fantasy;
-    background-color: #000033;
+    background-color: black;
+    overflow-x: hidden;
 }
 .background {
+  margin-top: 5%;
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     background: black;
+    z-index: 3;
 
 }
 .backgroundblack {
     background: linear-gradient(0deg, #c16a00 0%, #000033 40%);
-    border-radius: 0 0 10% 10%;
+    border-radius: 10%;
 }
 #container {
   width: 80%;
-  height: 200px;
+  height: 100vh;
   display: block;
-  margin: auto;
   background-color: black;
+  overflow: hidden;
+  position: absolute;
+  left: 10%;
+
 }
-/* 
 
-Main title on mainscreen
-
-*/
 
 .hide {
   display: none;
@@ -34,16 +36,56 @@ Main title on mainscreen
 .show {
   display: block;
 }
+
+/* 
+
+Main title on fireplace
+
+
+*/
+
+/*
+
+*/
 #info  {
   position: absolute;
-  width: 100%;
+  width: 80%;
   top: 10%;
+  left: 10%;
   font-size: 2vw;
   color: #878787;
   justify-content: center;
   text-align: center;
   background-color: transparent;
   display: none;
+}
+#pulse {
+  animation: pulse 2s ease infinite;
+}
+
+/* 
+ Pages reference text
+*/
+#pages {
+  position: absolute;
+  bottom: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  text-align: center;
+  color: #878787;
+}
+#aboutPage {
+  display: none;
+}
+#contactPage {
+  display: none;
+}
+#galleryPage {
+  display: none;
+}
+.textIn {
+  animation: textIn 1s ease-in forwards;
 }
 
 #info h1 {
@@ -52,10 +94,6 @@ Main title on mainscreen
   animation-timing-function: linear;
   animation-fill-mode: forwards;
 }
-nav a:hover {
-  color: rgb(255, 162, 0);
-  transition: 0.2s;
-}
 #fireplace{
     display: none;
 }
@@ -63,16 +101,18 @@ nav a:hover {
   width: 270px;
   height: auto;
   position: absolute;
-  left:49.5%;
-  margin-left: -100px;
-  top: 55%;
+  left:23%;
+  top: 50%;
   display: none;
 }
+/*
+Text from start page
+*/
 #text {
   text-align: center;
   color: rgb(83, 75, 75);
   margin: 0;
-  margin-left: 40%;
+  margin-left: 35%;
   height: auto;
     position: absolute;
     top: 40%;
@@ -93,14 +133,16 @@ FLAMES
     width: 200px;
     height: auto;
     position: absolute;
-    left:50%;
+    left:45%;
     margin-left: -100px;
-    top: 50%;
+    top: 42%;
+    z-index: 1;
   }
   .mo-fire svg {
     width: 100%;
     height: auto;
-    position: relative
+    position: relative;
+    z-index: 1;
   }
   .flame {
     animation-name: flamefly;
@@ -145,7 +187,51 @@ FLAMES
     animation-duration: 2.5s;
     animation-delay: 5s;
   }
+/* Marshmallows */
 
+
+#stick1 {
+  max-width: 100%;
+  height: 35vh;
+  position: absolute;
+  bottom: 35%;
+  left: 5%;
+  transform: rotate(90deg);
+  z-index: 2;
+  display: none;
+}
+#stick1:hover {
+  -webkit-filter: drop-shadow(0px 0px 10px rgb(255, 255, 255));
+  bfilter: drop-shadow(0px 0px 10px rgb(255, 255, 255));
+}
+#stick2 {
+  max-width: 100%;
+  height: 35vh;
+  position: absolute;
+  bottom: 10%;
+  left: 70%;
+  transform: rotate(-80deg);
+  z-index: 2;
+  display: none;
+}
+#stick2:hover {
+  -webkit-filter: drop-shadow(0px 0px 10px rgb(255, 255, 255));
+  bfilter: drop-shadow(0px 0px 10px rgb(255, 255, 255));
+}
+#stick3 {
+  max-width: 100%;
+  height: 35vh;
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  transform: rotate(35deg);
+  z-index: 2;
+  display: none;
+}
+#stick3:hover {
+  -webkit-filter: drop-shadow(0px 0px 10px rgb(255, 255, 255));
+  bfilter: drop-shadow(0px 0px 10px rgb(255, 255, 255));
+}
 
 /* About Us Styling */
 #aboutUsContainer {
@@ -248,5 +334,35 @@ FLAMES
   }
   100% {
     background-position: 0% 0%;
+  }
+}
+@keyframes pulse {
+  0% {
+    text-shadow: 0px 0px 0px;
+  }
+  
+  50% {
+    text-shadow: 0px 0px 10px rgb(255, 149, 0);
+  }
+ 
+  100% {
+    text-shadow: 0px 0px 0px;
+  }
+}
+@keyframes textIn {
+  0% {
+    opacity: 0;
+  }
+  50%
+  {
+    opacity: 0.5;
+    filter: blur(2px);
+    
+  }
+  100%
+  {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateY(-20px);
   }
 }

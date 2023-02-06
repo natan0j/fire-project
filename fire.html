@@ -3,7 +3,6 @@
 <head>
     <link rel="stylesheet" href="fire.css">
     <link rel="stylesheet" href="spark.css">
-    <link rel="stylesheet" href="carousel.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,8 +11,18 @@
 <body>
     <div id="container">
     <div id="info">
-        <h1>HEATING SINCE 2010</h1>
-        <h4>Scroll down to learn more about us.</h4>
+        <h1>THISISLIT</h1>
+        <h4>Click on <span id="pulse">marshmallows</span></h4>
+    </div>
+    <div id="pages">
+        <h2 id="aboutPage">About Us</h2>
+        <h2 id="contactPage">Contact</h2>
+        <h2 id="galleryPage">Gallery</h2>
+    </div>
+    <div id="stickContainter">
+        <img id="stick1" src="./assets/img/stickmarshmallow.png" onclick="showPage('aboutPage')">
+        <img id="stick2" src="./assets/img/stickmarshmallow.png" onclick="showPage('galleryPage')">
+        <img id="stick3" src="./assets/img/stickmarshmallow.png" onclick="showPage('contactPage')">
     </div>
     <div id="background" class="background" onclick="sparkCount()">
         <div id="text">
@@ -21,7 +30,7 @@
         <h4>There is always a spark of light.</h4>
         <p>Click to bring it here.</p>
     </div>
-        <div class="mo-fire" id="fireplace" onclick="show()">
+        <div class="mo-fire" id="fireplace">
             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                width="125px" height="189.864px" viewBox="0 0 125 189.864" enable-background="new 0 0 125 189.864" xml:space="preserve">
           <path class="flame-main" fill="#F36E21" d="M76.553,186.09c0,0-10.178-2.976-15.325-8.226s-9.278-16.82-9.278-16.82s-0.241-6.647-4.136-18.465
@@ -44,6 +53,7 @@
         <div>
             <img id="logs" src="./assets/img/fireplace.png" alt="logs">
         </div>
+        
     </div>
 </div>
         
