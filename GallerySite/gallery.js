@@ -1,19 +1,19 @@
 function createImages() {
-    //create 3 divs
+    //create 3 divs in containers
     for(x=1;x<4;x++){
     var image = document.createElement("div");
-    image.classList.add("image")
-    }
-
-
-   setTimeout(()=> {
+    image.classList.add("image");   
+    z = Math.floor(20*Math.random());
+    image.style.marginTop = z + "%";
+    image.style.backgroundImage = "url(https://picsum.photos/id/" + z +"/100/150)";
     var container = document.getElementsByClassName("imagesContainer")
     for (i=0; i<container.length; i++)
     {
         container[i].append(image);
-    }},100);
-    console.log(image);
+        
+    }}
 };
+
 
 
 function divCreator(){
@@ -22,30 +22,40 @@ function divCreator(){
    container.className = "imagesContainer";
    document.body.appendChild(container);
    createImages();
+   //animations
   container.keyframes = [
-    {opacity: 0, bottom: "-10%"}, 
-  {opacity: 1, bottom: "110%"}
+    {opacity: 0, bottom: "20%"}, 
+  {opacity: 1, bottom: "120%"}
   ];
   container.animProps = {
-    duration: 10000,
+    duration: 15000,
     easing: "ease-in"
   }
   container.animate(container.keyframes, container.animProps);
   
 }
 function divRemove() {
-    var container = document.getElementsByClassName("imagesContainer");
-    var image = document.getElementById("image");
-    container.remove();
-    image.remove();
+    const container = document.getElementsByClassName("imagesContainer");
+    container[0].parentNode.removeChild(container[0]);
+    
 }
-/* THIS WORKS AS A ONE TIME
+
+function shuffleImage() {
+ 
+  image = document.getElementsByClassName("image");
+  for(i=0;i<image.length;i++){
+    console.log(i);
+  }
+}
+
+
+function loopImages() {
+    //one task
 divCreator();
-setTimeout(()=>divRemove(),9900);
-*/
+shuffleImage();
+setTimeout(()=>divRemove(),14900);
 
-divCreator();
-setTimeout(()=>divCreator(),5000)
+}
 
-
+setInterval(loopImages,6000);
 
