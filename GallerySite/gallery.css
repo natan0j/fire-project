@@ -21,17 +21,17 @@ body {
     margin: auto;
     justify-content: space-evenly;
     border-radius: 5%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-wrap: wrap;
     
 }
-#drawingContainer {
-    position: absolute;
-    bottom: 5%;
-    left: -5%;
+/*Sitting Guy */
 
-}
 #fireSit {
-    max-width: 80%;
-    min-width: 70%;
+    width: 500px;
+    left: -250px;
+    z-index: 1;
 }
 /*FIREPLACE*/
 /* ANIMATIONS */
@@ -54,14 +54,14 @@ body {
     }
 }
 
-
+/*Fireplace*/
 .mo-fire {
-    width: 200px;
+    width: 250px;
     height: auto;
     position: absolute;
-    left:48%;
-    margin-left: -100px;
-    bottom: 15%;
+    left:45%;
+    
+    bottom: 10%;
     z-index: -1;
   }
   .mo-fire svg {
@@ -115,11 +115,33 @@ body {
   }
 
   /*LOGS from FIREPLACE*/
-  #logs {
+  .mo-fire img {
     width: 200px;
-    height: auto;
     position: absolute;
-    left:30%;
-    bottom: 15%;
-    z-index: -1;
+    bottom: -5%;
+    left: 6%;
   }
+
+  @media  (max-width: 400px) {
+    .imagesContainer {
+      flex-wrap: wrap;
+    }
+    .image {
+      width: 40%;
+      box-sizing: border-box;
+      margin: auto;
+    }
+   .mo-fire {
+      width: 40%;
+      bottom: 5%;
+   }
+   #fireSit {
+    width: 400px;
+    left: -200px;
+   }
+   #logs {
+    width: 120px;
+   }
+   }
+ 
+  

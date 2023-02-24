@@ -5,7 +5,7 @@ function createImages() {
     image.classList.add("image");   
     z = Math.floor(20*Math.random());
     image.style.marginTop = z + "%";
-    image.style.backgroundImage = "url(https://picsum.photos/id/" + z +"/100/150)";
+    image.style.backgroundImage = "url(https://picsum.photos/id/" + z +"/200/150)";
     var container = document.getElementsByClassName("imagesContainer")
     for (i=0; i<container.length; i++)
     {

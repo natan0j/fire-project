@@ -52,7 +52,7 @@ Main title on fireplace
   width: 80%;
   top: 10%;
   left: 10%;
-  font-size: 2vw;
+  font-size: 4vw;
   color: #878787;
   justify-content: center;
   text-align: center;
@@ -97,14 +97,14 @@ Main title on fireplace
 #fireplace{
     display: none;
 }
-#logs {
-  width: 270px;
-  height: auto;
+#fireplace img {
+  width: 220px;
   position: absolute;
-  left:23%;
-  top: 50%;
-  display: none;
+  bottom: -10%;
+  left: 10%;
 }
+
+
 /*
 Text from start page
 */
@@ -112,14 +112,14 @@ Text from start page
   text-align: center;
   color: rgb(83, 75, 75);
   margin: 0;
-  margin-left: 35%;
+  margin-left: 25%;
   height: auto;
     position: absolute;
     top: 40%;
     display: block;
     font-style: oblique;
     font-family: impact, fantasy;
-    font-size: 1.5vw;
+    font-size: 3vw;
 }
 
 /*
@@ -133,8 +133,8 @@ FLAMES
     width: 200px;
     height: auto;
     position: absolute;
-    left:45%;
-    margin-left: -100px;
+    left:50%;
+    margin-left: -120px;
     top: 42%;
     z-index: 1;
   }
@@ -195,7 +195,7 @@ FLAMES
   height: 35vh;
   position: absolute;
   bottom: 35%;
-  left: 5%;
+  left: -10%;
   transform: rotate(90deg);
   z-index: 2;
   display: none;
@@ -223,7 +223,7 @@ FLAMES
   height: 35vh;
   position: absolute;
   bottom: 10%;
-  left: 5%;
+  left: -5%;
   transform: rotate(35deg);
   z-index: 2;
   display: none;
@@ -364,5 +364,30 @@ FLAMES
     opacity: 1;
     filter: blur(0px);
     transform: translateY(-20px);
+  }
+}
+
+/* Media queries for Desktop */ 
+
+@media (min-width: 400px) { 
+  #logs {
+    position: absolute ;
+    top: 80%;
+    width: 20px;
+    display: none;
+  }
+  #pages {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  #stick1 {
+    left: 32%;
+    top: 35%
+  }
+  #stick2 {
+    left: 62%;
+  }
+  #stick3 {
+    left: 33%;
   }
 }

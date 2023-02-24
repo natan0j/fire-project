@@ -30,8 +30,6 @@ function colourChanger(){
         i.classList.add("backgroundblack");   
         var x = document.getElementById("fireplace");
                 x.style.display = "block";
-        var y = document.getElementById("logs");
-                y.style.display = "block";
         var z = document.getElementById("text");
                 z.style.display = "none";
         var title = document.getElementById("info");
